@@ -1,0 +1,214 @@
+.
+├── README.md
+├── app
+│   ├── add-attributes
+│   │   └── page.js
+│   ├── add-new-user
+│   │   └── page.js
+│   ├── add-product
+│   │   └── page.js
+│   ├── all-roles
+│   │   └── page.js
+│   ├── all-user
+│   │   └── page.js
+│   ├── attributes
+│   │   └── page.js
+│   ├── category-list
+│   │   └── page.js
+│   ├── cities
+│   │   └── page.js
+│   ├── components
+│   │   └── page.js
+│   ├── countries
+│   │   └── page.js
+│   ├── create-role
+│   │   └── page.js
+│   ├── edit-page
+│   │   └── page.js
+│   ├── favicon.ico
+│   ├── gallery
+│   │   └── page.js
+│   ├── home-2
+│   │   └── page.js
+│   ├── home-3
+│   │   └── page.js
+│   ├── home-4
+│   │   └── page.js
+│   ├── home-boxed
+│   │   └── page.js
+│   ├── home-menu-icon-default
+│   │   └── page.js
+│   ├── home-menu-icon-hover
+│   │   └── page.js
+│   ├── layout.js
+│   ├── list-page
+│   │   └── page.js
+│   ├── loading.js
+│   ├── login
+│   │   └── page.js
+│   ├── new-category
+│   │   └── page.js
+│   ├── new-page
+│   │   └── page.js
+│   ├── not-found.js
+│   ├── oder-detail
+│   │   └── page.js
+│   ├── oder-list
+│   │   └── page.js
+│   ├── oder-tracking
+│   │   └── page.js
+│   ├── page.js
+│   ├── product-detail-1
+│   │   └── page.js
+│   ├── product-detail-2
+│   │   └── page.js
+│   ├── product-detail-3
+│   │   └── page.js
+│   ├── product-list
+│   │   └── page.js
+│   ├── report
+│   │   └── page.js
+│   ├── setting
+│   │   └── page.js
+│   ├── sign-up
+│   │   └── page.js
+│   └── states
+│       └── page.js
+├── components
+│   ├── ThemeSettings
+│   │   ├── Clear1.js
+│   │   ├── Clear2.js
+│   │   ├── ColorsHeader.js
+│   │   ├── ColorsMenu.js
+│   │   ├── HeaderPosition.js
+│   │   ├── LayoutWidth.js
+│   │   ├── MenuBackground.js
+│   │   ├── MenuPosition.js
+│   │   ├── MenuStyle.js
+│   │   ├── PrimaryTheme.js
+│   │   ├── StyleLoader.js
+│   │   └── ThemeBackground.js
+│   ├── chart
+│   │   ├── ChartList.js
+│   │   ├── CircleProgressbar.js
+│   │   ├── EarningsChart1.js
+│   │   ├── EarningsChart2.js
+│   │   ├── EarningsChart3.js
+│   │   ├── OrderChart1.js
+│   │   ├── RevenueChart1.js
+│   │   ├── RevenueChart2.js
+│   │   ├── SaleChart1.js
+│   │   ├── SaleChart2.js
+│   │   ├── SaleChart3.js
+│   │   ├── SaleDonutChart1.js
+│   │   ├── SellerChart1.js
+│   │   ├── StatsChart1.js
+│   │   ├── StatsChart2.js
+│   │   ├── StatsChart3.js
+│   │   └── VisitorChart1.js
+│   ├── elements
+│   │   ├── CartQuantity.js
+│   │   ├── DotDropdown.js
+│   │   ├── FullScreenButton.js
+│   │   ├── Language.js
+│   │   ├── Preloader.js
+│   │   ├── ProgressBar.js
+│   │   ├── ThemeSwitch.js
+│   │   ├── UsaMap.js
+│   │   ├── ViewAllDropdown.js
+│   │   └── WeeklyDropdown.js
+│   ├── layout
+│   │   ├── Breadcrumb.js
+│   │   ├── Footer1.js
+│   │   ├── Header1.js
+│   │   ├── Layout.js
+│   │   ├── Menu.js
+│   │   ├── Offcanvas.js
+│   │   └── Sidebar.js
+│   ├── sections
+│   │   ├── BestShopSellers1.js
+│   │   ├── Category1.js
+│   │   ├── ChartDefault1.js
+│   │   ├── ChartDefault2.js
+│   │   ├── CustomerGrowth1.js
+│   │   ├── Customers1.js
+│   │   ├── Customers2.js
+│   │   ├── Earnings1.js
+│   │   ├── Earnings2.js
+│   │   ├── Earnings3.js
+│   │   ├── Goal1.js
+│   │   ├── NewComment1.js
+│   │   ├── Orders1.js
+│   │   ├── Orders2.js
+│   │   ├── Orders3.js
+│   │   ├── Orders4.js
+│   │   ├── Product.js
+│   │   ├── ProductOverview1.js
+│   │   ├── ProductOverview2.js
+│   │   ├── ProductOverview3.js
+│   │   ├── RecentOrder1.js
+│   │   ├── Revenue1.js
+│   │   ├── Revenue2.js
+│   │   ├── Sales1.js
+│   │   ├── Sales2.js
+│   │   ├── Sales3.js
+│   │   ├── TopCountries1.js
+│   │   ├── TopCountries2.js
+│   │   ├── TopProduct1.js
+│   │   ├── TopProduct2.js
+│   │   └── WebsiteVisitors1.js
+│   └── slider
+│       ├── ProductThumbSlider.js
+│       └── ProductThumbSlider2.js
+├── jsconfig.json
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── project-structure.txt
+├── public
+│   ├── css
+│   │   ├── animate.min.css
+│   │   ├── animation.css
+│   │   ├── bootstrap-select.min.css
+│   │   ├── bootstrap.css
+│   │   ├── style.css
+│   │   ├── style.css.map
+│   │   └── swiper-bundle.min.css
+│   ├── font
+│   │   └── fonts.css
+│   ├── icon
+│   │   ├── Read Me.txt
+│   │   ├── demo-files
+│   │   ├── demo.html
+│   │   ├── fonts
+│   │   ├── selection.json
+│   │   └── style.css
+│   ├── images
+│   │   ├── apps
+│   │   ├── avatar
+│   │   ├── bg-menu
+│   │   ├── close.svg
+│   │   ├── country
+│   │   ├── favicon.png
+│   │   ├── images-section
+│   │   ├── item-background
+│   │   ├── logo
+│   │   ├── menu-left
+│   │   ├── preload.png
+│   │   ├── products
+│   │   ├── shop
+│   │   └── upload
+│   ├── next.svg
+│   ├── scss
+│   │   ├── _darkmode.scss
+│   │   ├── _reset.scss
+│   │   ├── _responsive.scss
+│   │   ├── _theme-settings.scss
+│   │   ├── abstracts
+│   │   ├── app.scss
+│   │   ├── component
+│   │   └── widgets.scss
+│   └── vercel.svg
+└── yarn.lock
+
+64 directories, 148 files

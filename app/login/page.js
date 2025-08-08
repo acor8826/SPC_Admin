@@ -1,93 +1,94 @@
+'use client';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 
-import Link from "next/link"
-export default function Login() {
+// Import all original theme stylesheets
+import '/public/css/animate.min.css';
+import '/public/css/animation.css';
+import '/public/css/bootstrap-select.min.css';
+import '/public/css/bootstrap.css';
+import '/public/css/swiper-bundle.min.css';
+import '/public/css/style.css';
+import '/public/font/fonts.css';
+import '/public/icon/style.css';
 
-    return (
-        <>
+export default function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const { login, isAuthenticated } = useAuth();
+  const router = useRouter();
 
-            <div id="wrapper">
-                {/* #page */}
-                <div id="page" className>
-                    <div className="wrap-login-page">
-                        <div className="flex-grow flex flex-column justify-center gap30">
-                            <Link href="/" id="site-logo-inner">
-                            </Link>
-                            <div className="login-box">
-                                <div>
-                                    <h3>Login to account</h3>
-                                    <div className="body-text">Enter your email &amp; password to login</div>
-                                </div>
-                                <form className="form-login flex flex-column gap24">
-                                    <fieldset className="email">
-                                        <div className="body-title mb-10">Email address <span className="tf-color-1">*</span></div>
-                                        <input className="flex-grow" type="email" placeholder="Enter your email address" name="email" tabIndex={0} aria-required="true" required />
-                                    </fieldset>
-                                    <fieldset className="password">
-                                        <div className="body-title mb-10">Password <span className="tf-color-1">*</span></div>
-                                        <input className="password-input" type="password" placeholder="Enter your password" name="password" tabIndex={0} aria-required="true" required />
-                                        <span className="show-pass">
-                                            <i className="icon-eye view" />
-                                            <i className="icon-eye-off hide" />
-                                        </span>
-                                    </fieldset>
-                                    <div className="flex justify-between items-center">
-                                        <div className="flex gap10">
-                                            <input type="checkbox" id="signed" />
-                                            <label className="body-text" htmlFor="signed">Keep me signed in</label>
-                                        </div>
-                                        <Link href="#" className="body-text tf-color">Forgot password?</Link>
-                                    </div>
-                                    <Link href="/" className="tf-button w-full">Login</Link>
-                                </form>
-                                <div>
-                                    <div className="text-tiny mb-16 text-center">Or continue with social account</div>
-                                    <div className="flex gap16 mobile-wrap">
-                                        <Link href="/" className="tf-button style-2 w-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width={23} height={22} viewBox="0 0 23 22" fill="none">
-                                                <g clipPath="url(#clip0_604_19993)">
-                                                    <path d="M21.6676 9.08734L12.694 9.08691C12.2978 9.08691 11.9766 9.40806 11.9766 9.80432V12.671C11.9766 13.0672 12.2978 13.3884 12.694 13.3884H17.7474C17.194 14.8244 16.1612 16.0271 14.8435 16.7913L16.9983 20.5213C20.4548 18.5223 22.4983 15.0148 22.4983 11.0884C22.4983 10.5293 22.4571 10.1297 22.3747 9.67967C22.312 9.33777 22.0152 9.08734 21.6676 9.08734Z" fill="#167EE6" />
-                                                    <path d="M11.5019 17.6959C9.02885 17.6959 6.86993 16.3447 5.71041 14.3452L1.98047 16.4951C3.87861 19.7849 7.43445 22.0002 11.5019 22.0002C13.4972 22.0002 15.38 21.463 17.0019 20.5267V20.5216L14.8471 16.7915C13.8615 17.3632 12.7209 17.6959 11.5019 17.6959Z" fill="#12B347" />
-                                                    <path d="M17 20.5267V20.5216L14.8452 16.7915C13.8596 17.3631 12.7192 17.6959 11.5 17.6959V22.0002C13.4953 22.0002 15.3782 21.463 17 20.5267Z" fill="#0F993E" />
-                                                    <path d="M4.80435 10.9998C4.80435 9.78079 5.13702 8.64036 5.70854 7.65478L1.9786 5.50488C1.0372 7.12167 0.5 8.99932 0.5 10.9998C0.5 13.0002 1.0372 14.8779 1.9786 16.4947L5.70854 14.3448C5.13702 13.3592 4.80435 12.2188 4.80435 10.9998Z" fill="#FFD500" />
-                                                    <path d="M11.5019 4.30435C13.1145 4.30435 14.5958 4.87738 15.7529 5.83056C16.0383 6.06568 16.4532 6.04871 16.7146 5.78725L18.7458 3.75611C19.0424 3.45946 19.0213 2.97387 18.7044 2.69895C16.7658 1.0172 14.2436 0 11.5019 0C7.43445 0 3.87861 2.21534 1.98047 5.50511L5.71041 7.65501C6.86993 5.65555 9.02885 4.30435 11.5019 4.30435Z" fill="#FF4B26" />
-                                                    <path d="M15.751 5.83056C16.0364 6.06568 16.4513 6.04871 16.7128 5.78725L18.7439 3.75611C19.0405 3.45946 19.0194 2.97387 18.7025 2.69895C16.764 1.01716 14.2417 0 11.5 0V4.30435C13.1126 4.30435 14.594 4.87738 15.751 5.83056Z" fill="#D93F21" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_604_19993">
-                                                        <rect width={22} height={22} fill="white" transform="translate(0.5)" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span className="tf-color-3">Sign in with Google</span>
-                                        </Link>
-                                        <Link href="/" className="tf-button style-2 w-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width={23} height={22} viewBox="0 0 23 22" fill="none">
-                                                <g clipPath="url(#clip0_604_20003)">
-                                                    <path d="M22.5 11C22.5 16.4905 18.4773 21.0414 13.2188 21.8664V14.1797H15.7818L16.2695 11H13.2188V8.93664C13.2188 8.06652 13.645 7.21875 15.0114 7.21875H16.3984V4.51172C16.3984 4.51172 15.1395 4.29688 13.9359 4.29688C11.4235 4.29688 9.78125 5.81969 9.78125 8.57656V11H6.98828V14.1797H9.78125V21.8664C4.52273 21.0414 0.5 16.4905 0.5 11C0.5 4.92508 5.42508 0 11.5 0C17.5749 0 22.5 4.92508 22.5 11Z" fill="#1877F2" />
-                                                    <path d="M15.7818 14.1797L16.2695 11H13.2188V8.9366C13.2188 8.0667 13.6449 7.21875 15.0114 7.21875H16.3984V4.51172C16.3984 4.51172 15.1396 4.29688 13.9361 4.29688C11.4235 4.29688 9.78125 5.81969 9.78125 8.57656V11H6.98828V14.1797H9.78125V21.8663C10.3413 21.9542 10.9153 22 11.5 22C12.0847 22 12.6587 21.9542 13.2188 21.8663V14.1797H15.7818Z" fill="white" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_604_20003">
-                                                        <rect width={22} height={22} fill="white" transform="translate(0.5)" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span className="tf-color-3">Sign in with Facebook</span>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="body-text text-center">
-                                    You don't have an account yet?
-                                    <Link href="/sign-up" className="body-text tf-color">Register Now</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="text-tiny">Copyright © 2024 Remos, All rights reserved.</div>
-                    </div>
-                </div>
-                {/* /#page */}
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push('/');
+    }
+  }, [isAuthenticated]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const result = login({ email, password });
+
+    if (result.success) {
+      router.push('/');
+    } else {
+      setError(result.message || 'Login failed');
+    }
+  };
+
+  return (
+    <div className="vh-100 d-flex justify-content-center align-items-center bg-light">
+      <div className="login-wrapper">
+        <div className="loginbox bg-white shadow-sm border rounded p-4" style={{ maxWidth: 450, width: '100%' }}>
+          <div className="text-center mb-4">
+            <img
+              src="/images/logo/logo.png"
+              alt="Logo"
+              style={{ height: 40 }}
+              className="mb-2"
+            />
+            <h4 className="font-w700">Admin Login</h4>
+          </div>
+
+          {error && (
+            <div className="alert alert-danger text-center py-2">
+              {error}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit}>
+            <div className="form-group mb-3">
+              <label className="form-label">Email address</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="admin@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </div>
 
-        </>
-    )
+            <div className="form-group mb-4">
+              <label className="form-label">Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="secret123"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+
+            <button type="submit" className="btn btn-primary w-100">
+              Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }

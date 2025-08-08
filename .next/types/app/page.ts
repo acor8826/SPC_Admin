@@ -1,4 +1,4 @@
-// File: C:\Users\user\Downloads\themeforest-QeGaLuib-remos-ecommerce-admin-dashboard-react-nextjs-template\remons-package\remos-react\app\page.js
+// File: /workspaces/SPC_Admin/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
