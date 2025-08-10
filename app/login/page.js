@@ -49,7 +49,7 @@ export default function LoginPage() {
               style={{ height: 40 }}
               className="mb-2"
             />
-            <h4 className="font-w700">Admin Login</h4>
+            <h4 className="font-w700"></h4>
           </div>
 
           {error && (

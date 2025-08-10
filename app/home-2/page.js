@@ -8,12 +8,18 @@ import ProductOverview2 from "@/components/sections/ProductOverview2"
 import ProductOverview3 from "@/components/sections/ProductOverview3"
 import Revenue1 from "@/components/sections/Revenue1"
 import TopCountries2 from "@/components/sections/TopCountries2"
+
+import ChartDefault2 from "@/components/sections/ChartDefault2"
 export default function Home2() {
 
     return (
         <>
 
             <Layout breadcrumbTitleParent="Parenttitle" breadcrumbTitle="title">
+                <div className="tf-section-4 mb-30">
+
+                    <ChartDefault2 />
+                </div>
                 <div className="tf-section-4 mb-30">
                     <ChartDefault1 />
                 </div>
